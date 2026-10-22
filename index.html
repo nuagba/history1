@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 야르한 역사 문화재 수집</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginScreen">
+        <h1>앙 야르한 역사</h1>
+        <h2>로그인</h2>
+
+        <input type="text" id="loginId" placeHolder="아이디">
+        <input type="password" id="loginPassword" placeholder="비밀번호">
+        
+        <div class="login-inputs">
+           <button onclick="login()">로그인</button>
+           <button onclick="showSignup()">회원가입</button>
+        </div>
+        <p id="loginMessage"></p>
+    </div>
+
+
+<div class="game" id="gameScreen">
+    <div>
+        <h1> 야르한 역사(예시본)</h1>
+         <p> 앙 야르한 문화재를 주변에서 찾고 수집하거랑</p>    
+    </div>
+   
+    <div class="map">
+        <h2> 와 주변에 문화재 있다</h2>
+        <div class="map-area" id="mapArea">
+            <div class="map-content" id="mapContent">
+              <div class="player">📍</div>
+
+              <div class="monument monument1" onclick="discoverMonument('충효동 왕버들군')">🌳</div>
+              <div class="monument monument2" onclick="discoverMonument('충장사')">🏛️</div>
+              <div class="monument monument3" onclick="discoverMonument('증심사')">🪷</div>
+              <div class="monument monument4" onclick="discoverMonument('무양서원')">🏛️</div>
+              <div class="monument monument5" onclick="discoverMonument('양림역사문화마을')">🏠</div>        
+            </div>  
+        </div>
+    </div>
+
+    <div id="discovery">
+        <h2> 문화재 발견 야르</h2>
+        <h3 id="monumentName"></h3>
+        <p id="monumentPeriod"></p>
+        <p id="monumentLocation"></p>
+        <p id="monumentRarity"></p>
+        <p id="monumentDescription"></p>
+        <p>와우 판타스틱</p>
+        <button id="collectButton" onclick="collectMonument()">수집하기</button>
+    </div>
+
+<button id="collectionBookButton" onclick="toggleCollection()"> 📖 도감집</button>
+
+    <div class="collection" id="collectionBook">
+
+        <h2> 야르한 내  광주 문화재 수집 도감들 </h2>
+        <p> 앙 내가 수집한 광주 문화재 </p>
+
+        <p id="collectionCount">수집: 0/3 </p>
+        <p id="collectionMessage">아직 문화재 남아 있다잉!!</p>
+        <div id="collectionList"></div>
+
+        <div id="detail">
+            <h2 id="detailName"></h2>
+            <p id="detailPeriod"></p>
+            <p id="detailLocation"></p>
+            <p id="detailRarity"></p>
+            <p id="detailDescription"></p>
+            <button onclick="closeDetail()">닫기</button>
+        </div>
+    </div>
+
+    <button onclick="resetCollection()">도감 초기화(임시)</button>
+    <button onclick="logout()">로그아웃</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

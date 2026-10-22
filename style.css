@@ -1,0 +1,267 @@
+body {
+    background-color:aliceblue;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.game{
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.map {
+    background-color: white;
+    border: 3px solid #777;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.collection{
+    background-color: white;
+    border: 3px solid #777;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+button{
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.map-area{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+
+    border: 4px solid #777;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-color: #ddd;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+
+    cursor: grab;
+}
+
+.map-content {
+    position: absolute;
+    width: 1500px;
+    height: 1015px;
+    left: -350px;
+    top: -250px;
+    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Gwangju-map.png");
+    background-size: 1500px 1015px;
+    background-repeat: no-repeat;
+    user-select: none;
+    touch-action: none;
+}
+
+.map-content.player {
+    z-index: 10;
+}
+
+.map-content.monument {
+    z-index: 20;
+}
+
+.map-content:active {
+    cursor: grabbing;
+}
+.player{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    font-size: 35px;
+    transForm: translate(-50%, -50%);
+    z-index: 10;
+    filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.3));
+    cursor: pointer;
+}
+
+.monument {
+    position: absolute;
+    font-size: 38px;
+    z-index: 5;
+    cursor: pointer;
+    filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.3));
+    transition: transform 0.2s;
+}
+
+.monument:hover {
+    transform: scale(1.3);
+}
+
+.monument1{
+    left: 70%;
+    top: 27%;
+}
+
+.monument2{
+    left: 75%;
+    top: 21%;
+}
+
+.monument3 {
+    left: 80%;
+    top: 72%;
+}
+
+.monument4 {
+    left: 22%;
+    top: 34%;
+}
+
+.monument5 {
+    left: 50%;
+    top: 80%;
+}
+
+#discovery {
+    display: none;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+
+    background-color:antiquewhite;
+
+    border:4px solid #777;
+    border-radius: 20px;
+
+    padding:30px;
+
+    z-index: 1000;
+}
+
+.card {
+    background-color:aliceblue;
+    border: 2px solid #777;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    box-shadow: 3px 3px 0px #777;
+}
+
+#collectionList {
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 15px;
+}
+
+.card {
+    width: 100%;
+    height: 220px;
+    padding: 0;
+    background-color:aliceblue;
+    border: 3px solid #777;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#detail {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color:antiquewhite;
+    border: 4px solid #777;
+    border-radius: 20px;
+    padding: 30px;
+    z-index: 2000;
+    text-align: left;
+}
+
+#detail h2 {
+    text-align: center;
+}
+
+.unknown-card {
+    background-color:antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+.unknown {
+    font-size: 50px;
+    font-weight: bold;
+    color: #777;
+}
+
+#gameScreen {
+    display: none;
+}
+
+#loginScreen {
+    min-height: 100vh;
+    background-color: rgb(108, 173, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loginScreen input {
+    width: 180px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+}
+
+#loginScreen button {
+    width: 100px;
+    padding: 8px 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+#collectionBookButton {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    background-color:antiquewhite;
+    border: 3px solid #777;
+}
+
+#collectionBook {
+    display: none;
+}
+
+.login-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
